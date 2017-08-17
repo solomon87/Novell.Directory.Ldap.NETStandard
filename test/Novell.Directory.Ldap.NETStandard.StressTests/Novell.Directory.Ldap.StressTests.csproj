@@ -37,6 +37,6 @@
     <PackageReference Include="xunit" Version="2.2.0" />
   </ItemGroup>
 
-  <Import Project="..\..\Novell.Directory.Ldap.UnitTests\Novell.Directory.Ldap.UnitTests.projitems" Label="Shared" />
+  <Import Project="..\..\Novell.Directory.Ldap.UnitTests.Shared\Novell.Directory.Ldap.UnitTests.projitems" Label="Shared" />
 
 </Project>
