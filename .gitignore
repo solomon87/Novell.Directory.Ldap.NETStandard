@@ -250,3 +250,4 @@ paket-files/
 # JetBrains Rider
 .idea/
 *.sln.iml
+/Novell.Directory.Ldap.UnitTests.Shared/appsettings.local.json

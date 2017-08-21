@@ -20,7 +20,9 @@ namespace Novell.Directory.Ldap.NETStandard.FunctionalTests.Helpers
 
         static TestsConfig()
         {
-            var configurationBuilder = new ConfigurationBuilder().AddJsonFile("appsettings.json");
+            var configurationBuilder = new ConfigurationBuilder()
+                .AddJsonFile("appsettings.json")
+                .AddJsonFile("appsettings.local.json", optional: true);
             var configuration = configurationBuilder.Build();
             var ldapServerConfigurationSection = configuration.GetSection(nameof(LdapServerConfiguration));
             var ldapServerConfiguration = new LdapServerConfiguration();
