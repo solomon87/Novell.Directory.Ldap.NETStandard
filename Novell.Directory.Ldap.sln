@@ -88,6 +88,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{8AD0EC06-B
 		docs\NDK-Ldap.pdf = docs\NDK-Ldap.pdf
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "config", "config", "{72D85ECB-0F8A-42C2-A22D-2884E927A691}"
+	ProjectSection(SolutionItems) = preProject
+		config\baseDn.ldif = config\baseDn.ldif
+		config\cert_template.conf = config\cert_template.conf
+		config\slapd.conf = config\slapd.conf
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		Novell.Directory.Ldap.UnitTests.Shared\Novell.Directory.Ldap.UnitTests.projitems*{b307f4e3-ed78-4a20-a237-8a2967267e95}*SharedItemsImports = 13
@@ -132,6 +139,7 @@ Global
 		{71A094A6-4EFD-4687-A213-0BF656EAE79B} = {DE39ECF9-41D3-4C25-99D6-800D27CAC231}
 		{F3819520-50ED-40D9-98B2-FCA1CFD5C3CD} = {DE39ECF9-41D3-4C25-99D6-800D27CAC231}
 		{8AD0EC06-B900-4C03-A44E-0E695C053B76} = {3A16475B-0D8E-4316-86D5-F7D37EEE802D}
+		{72D85ECB-0F8A-42C2-A22D-2884E927A691} = {3A16475B-0D8E-4316-86D5-F7D37EEE802D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3D2D8EDC-EE87-4702-AF24-CC1DB67040FD}
