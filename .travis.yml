@@ -1,7 +1,7 @@
 sudo: required
 dist: trusty
 language: csharp
-dotnet: 2.0
+dotnet: 2.0.0
 mono: none
 
 env:
