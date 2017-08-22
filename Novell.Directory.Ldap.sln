@@ -12,8 +12,6 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Novell.Directory.Ldap.UnitT
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{8266CFB1-B034-4016-9E1C-27CA925C19E8}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Novell.Directory.Ldap.UnitTests.NETCore1_1.NETStandard1_3", "Novell.Directory.Ldap.UnitTests.NETCore1_1.NETStandard1_3\Novell.Directory.Ldap.UnitTests.NETCore1_1.NETStandard1_3.csproj", "{8F981DB6-7C42-4CDB-A771-D3895A3191A8}"
-EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Novell.Directory.Ldap.Shared", "Novell.Directory.Ldap.Shared\Novell.Directory.Ldap.Shared.shproj", "{DE7469CE-1E90-4C2D-86BF-923F2192EF4A}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Novell.Directory.Ldap.StressTests", "Novell.Directory.Ldap.StressTests\Novell.Directory.Ldap.StressTests.csproj", "{FB563202-1D93-42D2-AC30-F759805C373E}"
@@ -21,6 +19,10 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Novell.Directory.Ldap.NETStandard1_3", "Novell.Directory.Ldap.NETStandard1_3\Novell.Directory.Ldap.NETStandard1_3.csproj", "{52015909-8D44-48F7-9293-0F4EE2361443}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Novell.Directory.Ldap.NETStandard2_0", "Novell.Directory.Ldap.NETStandard2_0\Novell.Directory.Ldap.NETStandard2_0.csproj", "{2779FBB5-1C67-4E78-98C9-342EE5E7FF76}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Novell.Directory.Ldap.UnitTests.NETCore1_1", "Novell.Directory.Ldap.UnitTests.NETCore1_1\Novell.Directory.Ldap.UnitTests.NETCore1_1.csproj", "{4D666400-228A-4A68-9977-08CC87FADBC7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Novell.Directory.Ldap.UnitTests.NETCore2_0", "Novell.Directory.Ldap.UnitTests.NETCore2_0\Novell.Directory.Ldap.UnitTests.NETCore2_0.csproj", "{6D9A99A2-4581-476A-9C1F-7252A5B278FE}"
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
@@ -32,10 +34,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{8F981DB6-7C42-4CDB-A771-D3895A3191A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8F981DB6-7C42-4CDB-A771-D3895A3191A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8F981DB6-7C42-4CDB-A771-D3895A3191A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8F981DB6-7C42-4CDB-A771-D3895A3191A8}.Release|Any CPU.Build.0 = Release|Any CPU
 		{FB563202-1D93-42D2-AC30-F759805C373E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{FB563202-1D93-42D2-AC30-F759805C373E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FB563202-1D93-42D2-AC30-F759805C373E}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -48,14 +46,23 @@ Global
 		{2779FBB5-1C67-4E78-98C9-342EE5E7FF76}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2779FBB5-1C67-4E78-98C9-342EE5E7FF76}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2779FBB5-1C67-4E78-98C9-342EE5E7FF76}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D666400-228A-4A68-9977-08CC87FADBC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D666400-228A-4A68-9977-08CC87FADBC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D666400-228A-4A68-9977-08CC87FADBC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D666400-228A-4A68-9977-08CC87FADBC7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D9A99A2-4581-476A-9C1F-7252A5B278FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D9A99A2-4581-476A-9C1F-7252A5B278FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D9A99A2-4581-476A-9C1F-7252A5B278FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D9A99A2-4581-476A-9C1F-7252A5B278FE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{B307F4E3-ED78-4A20-A237-8A2967267E95} = {8266CFB1-B034-4016-9E1C-27CA925C19E8}
-		{8F981DB6-7C42-4CDB-A771-D3895A3191A8} = {8266CFB1-B034-4016-9E1C-27CA925C19E8}
 		{FB563202-1D93-42D2-AC30-F759805C373E} = {8266CFB1-B034-4016-9E1C-27CA925C19E8}
+		{4D666400-228A-4A68-9977-08CC87FADBC7} = {8266CFB1-B034-4016-9E1C-27CA925C19E8}
+		{6D9A99A2-4581-476A-9C1F-7252A5B278FE} = {8266CFB1-B034-4016-9E1C-27CA925C19E8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3D2D8EDC-EE87-4702-AF24-CC1DB67040FD}
