@@ -1,9 +1,0 @@
-<Project Sdk="Microsoft.NET.Sdk">
-
-  <PropertyGroup>
-    <TargetFramework>netstandard1.3</TargetFramework>
-  </PropertyGroup>
-
-  <Import Project="..\Novell.Directory.Ldap.UnitTests\Novell.Directory.Ldap.UnitTests.projitems" Label="Shared" />
-
-</Project>

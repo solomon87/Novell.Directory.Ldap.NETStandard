@@ -3,12 +3,16 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp1.1</TargetFramework>
     <DebugType>portable</DebugType>
-    <AssemblyName>Novell.Directory.Ldap.NETStandard.StressTests</AssemblyName>
+    <AssemblyName>Novell.Directory.Ldap.StressTests</AssemblyName>
     <OutputType>Exe</OutputType>
-    <PackageId>Novell.Directory.Ldap.NETStandard.StressTests</PackageId>
-    <RuntimeFrameworkVersion>1.1.1</RuntimeFrameworkVersion>
+    <PackageId>Novell.Directory.Ldap.StressTests</PackageId>
+    <RuntimeFrameworkVersion>1.1.2</RuntimeFrameworkVersion>
     <PackageTargetFallback>$(PackageTargetFallback);dnxcore50;portable-net45+win8</PackageTargetFallback>
-    <StartupObject>Novell.Directory.Ldap.NETStandard.StressTests.Program</StartupObject>
+    <StartupObject>Novell.Directory.Ldap.StressTests.Program</StartupObject>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
   </PropertyGroup>
 
   <ItemGroup>
@@ -18,13 +22,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Novell.Directory.Ldap.NETStandard\Novell.Directory.Ldap.NETStandard.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Microsoft.Extensions.Logging" Version="1.0.2" />
-    <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="1.0.2" />
-    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="1.0.2" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="1.1.2" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="1.1.2" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="1.1.2" />
     <PackageReference Include="Serilog" Version="2.3.0" />
     <PackageReference Include="Serilog.Extensions.Logging" Version="1.2.0" />
     <PackageReference Include="Serilog.Sinks.Literate" Version="2.0.0" />
@@ -37,6 +37,8 @@
     <PackageReference Include="xunit" Version="2.2.0" />
   </ItemGroup>
 
-  <Import Project="..\..\Novell.Directory.Ldap.UnitTests.Shared\Novell.Directory.Ldap.UnitTests.projitems" Label="Shared" />
+  <Import Project="..\Novell.Directory.Ldap.UnitTests.Shared\Novell.Directory.Ldap.UnitTests.projitems" Label="Shared" />
+
+  <Import Project="..\Novell.Directory.Ldap.Shared\Novell.Directory.Ldap.Shared.projitems" Label="Shared" />
 
 </Project>

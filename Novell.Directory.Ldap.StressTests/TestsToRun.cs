@@ -5,7 +5,7 @@ using System.Reflection;
 using Novell.Directory.Ldap.NETStandard.FunctionalTests;
 using Xunit;
 
-namespace Novell.Directory.Ldap.NETStandard.StressTests
+namespace Novell.Directory.Ldap.StressTests
 {
     public static class TestsToRun
     {

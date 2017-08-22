@@ -3,7 +3,7 @@ using Microsoft.Extensions.Logging;
 using Serilog;
 using Serilog.Events;
 
-namespace Novell.Directory.Ldap.NETStandard.StressTests
+namespace Novell.Directory.Ldap.StressTests
 {
     public class Program
     {

@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading;
 using Microsoft.Extensions.Logging;
 
-namespace Novell.Directory.Ldap.NETStandard.StressTests
+namespace Novell.Directory.Ldap.StressTests
 {
     public class MultiThreadTest
     {
