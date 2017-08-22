@@ -5,7 +5,13 @@ VisualStudioVersion = 15.0.26730.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3A16475B-0D8E-4316-86D5-F7D37EEE802D}"
 	ProjectSection(SolutionItems) = preProject
+		.travis.yml = .travis.yml
 		Novell.Directory.Ldap.UnitTests.Shared\appsettings.local.json = Novell.Directory.Ldap.UnitTests.Shared\appsettings.local.json
+		appveyor.yml = appveyor.yml
+		ChangeLog.md = ChangeLog.md
+		LICENSE = LICENSE
+		docs\NDK-Ldap.pdf = docs\NDK-Ldap.pdf
+		README.md = README.md
 	EndProjectSection
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Novell.Directory.Ldap.UnitTests.Shared", "Novell.Directory.Ldap.UnitTests.Shared\Novell.Directory.Ldap.UnitTests.Shared.shproj", "{B307F4E3-ED78-4A20-A237-8A2967267E95}"
@@ -23,6 +29,64 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Novell.Directory.Ldap.UnitTests.NETCore1_1", "Novell.Directory.Ldap.UnitTests.NETCore1_1\Novell.Directory.Ldap.UnitTests.NETCore1_1.csproj", "{4D666400-228A-4A68-9977-08CC87FADBC7}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Novell.Directory.Ldap.UnitTests.NETCore2_0", "Novell.Directory.Ldap.UnitTests.NETCore2_0\Novell.Directory.Ldap.UnitTests.NETCore2_0.csproj", "{6D9A99A2-4581-476A-9C1F-7252A5B278FE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "original_samples", "original_samples", "{DE39ECF9-41D3-4C25-99D6-800D27CAC231}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samples", "Samples", "{AE3AA969-7798-4AF2-AFA0-31F5CFBAAFFE}"
+	ProjectSection(SolutionItems) = preProject
+		original_samples\Samples\AddEntry.cs = original_samples\Samples\AddEntry.cs
+		original_samples\Samples\AddUserToGroup.cs = original_samples\Samples\AddUserToGroup.cs
+		original_samples\Samples\Bind.cs = original_samples\Samples\Bind.cs
+		original_samples\Samples\ClientSideSort.cs = original_samples\Samples\ClientSideSort.cs
+		original_samples\Samples\CompareAttrs.cs = original_samples\Samples\CompareAttrs.cs
+		original_samples\Samples\DelEntry.cs = original_samples\Samples\DelEntry.cs
+		original_samples\Samples\DynamicGroup.cs = original_samples\Samples\DynamicGroup.cs
+		original_samples\Samples\GetAttributeSchema.cs = original_samples\Samples\GetAttributeSchema.cs
+		original_samples\Samples\InteractiveSSL.cs = original_samples\Samples\InteractiveSSL.cs
+		original_samples\Samples\List.cs = original_samples\Samples\List.cs
+		original_samples\Samples\ListGroups.cs = original_samples\Samples\ListGroups.cs
+		original_samples\Samples\ModifyACL.cs = original_samples\Samples\ModifyACL.cs
+		original_samples\Samples\ModifyEntry.cs = original_samples\Samples\ModifyEntry.cs
+		original_samples\Samples\ModifyPass.cs = original_samples\Samples\ModifyPass.cs
+		original_samples\Samples\RenameEntry.cs = original_samples\Samples\RenameEntry.cs
+		original_samples\Samples\Search.cs = original_samples\Samples\Search.cs
+		original_samples\Samples\SecureBind.cs = original_samples\Samples\SecureBind.cs
+		original_samples\Samples\SetPassword.cs = original_samples\Samples\SetPassword.cs
+		original_samples\Samples\StartTLS.cs = original_samples\Samples\StartTLS.cs
+		original_samples\Samples\VerifyPassword.cs = original_samples\Samples\VerifyPassword.cs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samples.Controls", "Samples.Controls", "{71A094A6-4EFD-4687-A213-0BF656EAE79B}"
+	ProjectSection(SolutionItems) = preProject
+		original_samples\Samples.Controls\AsynchronousSortControl.cs = original_samples\Samples.Controls\AsynchronousSortControl.cs
+		original_samples\Samples.Controls\PSearchCallback.cs = original_samples\Samples.Controls\PSearchCallback.cs
+		original_samples\Samples.Controls\SearchPersist.cs = original_samples\Samples.Controls\SearchPersist.cs
+		original_samples\Samples.Controls\SimplePassword.cs = original_samples\Samples.Controls\SimplePassword.cs
+		original_samples\Samples.Controls\SortSearch.cs = original_samples\Samples.Controls\SortSearch.cs
+		original_samples\Samples.Controls\VLVControl.cs = original_samples\Samples.Controls\VLVControl.cs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samples.Extensions", "Samples.Extensions", "{F3819520-50ED-40D9-98B2-FCA1CFD5C3CD}"
+	ProjectSection(SolutionItems) = preProject
+		original_samples\Samples.Extensions\AddReplica.cs = original_samples\Samples.Extensions\AddReplica.cs
+		original_samples\Samples.Extensions\EdirEventSample.cs = original_samples\Samples.Extensions\EdirEventSample.cs
+		original_samples\Samples.Extensions\EdirEventsCallback.cs = original_samples\Samples.Extensions\EdirEventsCallback.cs
+		original_samples\Samples.Extensions\GetBindDN.cs = original_samples\Samples.Extensions\GetBindDN.cs
+		original_samples\Samples.Extensions\GetEffectivePrivileges.cs = original_samples\Samples.Extensions\GetEffectivePrivileges.cs
+		original_samples\Samples.Extensions\GetEffectivePrivilegesList.cs = original_samples\Samples.Extensions\GetEffectivePrivilegesList.cs
+		original_samples\Samples.Extensions\GetLDAPBackupRestore.cs = original_samples\Samples.Extensions\GetLDAPBackupRestore.cs
+		original_samples\Samples.Extensions\GetReplicaInfo.cs = original_samples\Samples.Extensions\GetReplicaInfo.cs
+		original_samples\Samples.Extensions\ListReplicas.cs = original_samples\Samples.Extensions\ListReplicas.cs
+		original_samples\Samples.Extensions\MergePartitions.cs = original_samples\Samples.Extensions\MergePartitions.cs
+		original_samples\Samples.Extensions\PartitionEntryCount.cs = original_samples\Samples.Extensions\PartitionEntryCount.cs
+		original_samples\Samples.Extensions\RefreshLDAPServer.cs = original_samples\Samples.Extensions\RefreshLDAPServer.cs
+		original_samples\Samples.Extensions\SplitPartition.cs = original_samples\Samples.Extensions\SplitPartition.cs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{8AD0EC06-B900-4C03-A44E-0E695C053B76}"
+	ProjectSection(SolutionItems) = preProject
+		docs\NDK-Ldap.pdf = docs\NDK-Ldap.pdf
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
@@ -63,6 +127,11 @@ Global
 		{FB563202-1D93-42D2-AC30-F759805C373E} = {8266CFB1-B034-4016-9E1C-27CA925C19E8}
 		{4D666400-228A-4A68-9977-08CC87FADBC7} = {8266CFB1-B034-4016-9E1C-27CA925C19E8}
 		{6D9A99A2-4581-476A-9C1F-7252A5B278FE} = {8266CFB1-B034-4016-9E1C-27CA925C19E8}
+		{DE39ECF9-41D3-4C25-99D6-800D27CAC231} = {3A16475B-0D8E-4316-86D5-F7D37EEE802D}
+		{AE3AA969-7798-4AF2-AFA0-31F5CFBAAFFE} = {DE39ECF9-41D3-4C25-99D6-800D27CAC231}
+		{71A094A6-4EFD-4687-A213-0BF656EAE79B} = {DE39ECF9-41D3-4C25-99D6-800D27CAC231}
+		{F3819520-50ED-40D9-98B2-FCA1CFD5C3CD} = {DE39ECF9-41D3-4C25-99D6-800D27CAC231}
+		{8AD0EC06-B900-4C03-A44E-0E695C053B76} = {3A16475B-0D8E-4316-86D5-F7D37EEE802D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3D2D8EDC-EE87-4702-AF24-CC1DB67040FD}
