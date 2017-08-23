@@ -1,7 +1,7 @@
 sudo: required
 dist: trusty
 language: csharp
-mono: none;
+mono: none
 dotnet: 2.0.0
 
 before_install:
