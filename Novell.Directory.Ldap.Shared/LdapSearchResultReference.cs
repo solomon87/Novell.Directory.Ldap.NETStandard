@@ -61,8 +61,6 @@ namespace Novell.Directory.Ldap
 
         private string[] srefs;
         private static object nameLock; // protect agentNum
-        private static int refNum = 0; // Debug, LdapConnection number
-        private string name; // String name for debug
         /*package*/
 
         /// <summary>

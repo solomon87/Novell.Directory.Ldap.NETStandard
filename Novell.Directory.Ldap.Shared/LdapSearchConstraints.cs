@@ -208,8 +208,6 @@ namespace Novell.Directory.Ldap
         private int maxResults = 1000;
         private int batchSize = 1;
         private static object nameLock; // protect agentNum
-        private static int lSConsNum = 0; // Debug, LdapConnection number
-        private string name; // String name for debug
 
         /// <summary>
         ///     Indicates that aliases are never dereferenced.

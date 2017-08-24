@@ -71,6 +71,7 @@ namespace Novell.Directory.Ldap
                 }
                 return ids;
             }
+            set { throw new NotImplementedException(); }
         }
 
         /// <summary>
@@ -79,11 +80,7 @@ namespace Novell.Directory.Ldap
         /// <returns>
         ///     the agent number
         /// </returns>
-        internal virtual string AgentName
-        {
-            /*packge*/
-            get { return name; }
-        }
+        internal virtual string AgentName { get; set; }
 
         /// <summary> Get a count of all messages queued</summary>
         internal virtual int Count
@@ -99,13 +96,12 @@ namespace Novell.Directory.Ldap
                 }
                 return count;
             }
+            set { throw new NotImplementedException(); }
         }
 
         private MessageVector messages;
         private int indexLastRead;
         private static object nameLock; // protect agentNum
-        private static int agentNum = 0; // Debug, agent number
-        private string name; // String name for debug
 
 
         internal MessageAgent()

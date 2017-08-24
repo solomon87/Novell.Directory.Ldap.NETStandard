@@ -417,10 +417,7 @@ namespace Novell.Directory.Ldap
         /// <returns>
         ///     the Connection object name
         /// </returns>
-        internal virtual string ConnectionName
-        {
-            get { return name; }
-        }
+        internal virtual string ConnectionName { get; set; }
 
         private LdapSearchConstraints defSearchCons;
         private LdapControl[] responseCtls;
@@ -429,11 +426,7 @@ namespace Novell.Directory.Ldap
         private object responseCtlSemaphore;
 
         private Connection conn;
-
-        private static object nameLock; // protect agentNum
-        private static int lConnNum = 0; // Debug, LdapConnection number
-        private string name; // String name for debug
-
+        
         /// <summary>
         ///     Used with search to specify that the scope of entrys to search is to
         ///     search only the base obect.
@@ -1220,12 +1213,11 @@ namespace Novell.Directory.Ldap
         /// </exception>
         public virtual void Bind(int version, string dn, string passwd, LdapConstraints cons)
         {
-            sbyte[] pw = null;
+            byte[] pw = null;
             if ((object) passwd != null)
             {
                 var encoder = Encoding.GetEncoding("utf-8");
-                var ibytes = encoder.GetBytes(passwd);
-                pw = SupportClass.ToSByteArray(ibytes);
+                pw = encoder.GetBytes(passwd);
             }
             Bind(version, dn, pw, cons);
         }
@@ -1259,7 +1251,7 @@ namespace Novell.Directory.Ldap
         ///     message and an Ldap error code.
         /// </exception>
         [CLSCompliant(false)]
-        public virtual void Bind(int version, string dn, sbyte[] passwd)
+        public virtual void Bind(int version, string dn, byte[] passwd)
         {
             Bind(version, dn, passwd, defSearchCons);
         }
@@ -1296,7 +1288,7 @@ namespace Novell.Directory.Ldap
         ///     message and an Ldap error code.
         /// </exception>
         [CLSCompliant(false)]
-        public virtual void Bind(int version, string dn, sbyte[] passwd, LdapConstraints cons)
+        public virtual void Bind(int version, string dn, byte[] passwd, LdapConstraints cons)
         {
             var queue = Bind(version, dn, passwd, null, cons);
             var res = (LdapResponse) queue.getResponse();
@@ -1346,7 +1338,7 @@ namespace Novell.Directory.Ldap
         ///     message and an Ldap error code.
         /// </exception>
         [CLSCompliant(false)]
-        public virtual LdapResponseQueue Bind(int version, string dn, sbyte[] passwd, LdapResponseQueue queue)
+        public virtual LdapResponseQueue Bind(int version, string dn, byte[] passwd, LdapResponseQueue queue)
         {
             return Bind(version, dn, passwd, queue, defSearchCons);
         }
@@ -1388,8 +1380,7 @@ namespace Novell.Directory.Ldap
         ///     message and an Ldap error code.
         /// </exception>
         [CLSCompliant(false)]
-        public virtual LdapResponseQueue Bind(int version, string dn, sbyte[] passwd, LdapResponseQueue queue,
-            LdapConstraints cons)
+        public virtual LdapResponseQueue Bind(int version, string dn, byte[] passwd, LdapResponseQueue queue, LdapConstraints cons)
         {
             int msgId;
             BindProperties bindProps;
@@ -1406,7 +1397,7 @@ namespace Novell.Directory.Ldap
             }
 
             if (passwd == null)
-                passwd = new sbyte[] {};
+                passwd = new byte[] {};
 
             var anonymous = false;
             if (passwd.Length == 0)
@@ -1415,7 +1406,7 @@ namespace Novell.Directory.Ldap
                 dn = ""; // set to null if anonymous
             }
 
-            LdapMessage msg = new LdapBindRequest(version, dn, passwd, cons.getControls());
+            LdapMessage msg = new LdapBindRequest(version, dn, SupportClass.ToSByteArray(passwd), cons.getControls());
 
             msgId = msg.MessageID;
             bindProps = new BindProperties(version, dn, "simple", anonymous, null, null);
@@ -3181,7 +3172,7 @@ namespace Novell.Directory.Ldap
                             dn = ap.DN;
                             pw = ap.Password;
                         }
-                        rconn.Bind(Ldap_V3, dn, pw);
+                        rconn.Bind((int) Ldap_V3, dn, SupportClass.ToByteArray(pw));
                         ex = null;
                         refInfo = new ReferralInfo(rconn, referrals, url);
                         // Indicate this connection created to follow referral

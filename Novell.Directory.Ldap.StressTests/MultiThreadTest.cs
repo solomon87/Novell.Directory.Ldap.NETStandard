@@ -20,6 +20,7 @@ namespace Novell.Directory.Ldap.StressTests
 
         private static readonly List<ExceptionInfo> Exceptions = new List<ExceptionInfo>();
 
+        [CLSCompliant(false)]
         public MultiThreadTest(int noOfThreads, TimeSpan timeToRun, ILoggerFactory loggerFactory)
         {
             _noOfThreads = noOfThreads;

@@ -638,6 +638,11 @@ namespace Novell.Directory.Ldap.Utilclass
             return Equals((DN) toDN);
         }
 
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
+        }
+
         public bool Equals(DN toDN)
         {
             var aList = toDN.getrdnList();

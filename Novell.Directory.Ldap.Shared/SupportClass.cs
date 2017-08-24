@@ -1000,7 +1000,7 @@ public class SupportClass
         /// </summary>
         /// <param name="valueToInsert">The value to insert in the array list.</param>
         /// <returns>Returns true after adding the value.</returns>
-        public virtual bool Add(object valueToInsert)
+        public new virtual bool Add(object valueToInsert)
         {
             Insert(Count, valueToInsert);
             return true;
@@ -1708,36 +1708,22 @@ public class SupportClass
     /// </summary>
     public class MessageDigestSupport
     {
-        private HashAlgorithm algorithm;
-        private byte[] data;
         private int position;
-        private string algorithmName;
 
         /// <summary>
         ///     The HashAlgorithm instance that provide the cryptographic hash algorithm
         /// </summary>
-        public HashAlgorithm Algorithm
-        {
-            get { return algorithm; }
-            set { algorithm = value; }
-        }
+        public HashAlgorithm Algorithm { get; set; }
 
         /// <summary>
         ///     The digest data
         /// </summary>
-        public byte[] Data
-        {
-            get { return data; }
-            set { data = value; }
-        }
+        public byte[] Data { get; set; }
 
         /// <summary>
         ///     The name of the cryptographic hash algorithm used in the instance
         /// </summary>
-        public string AlgorithmName
-        {
-            get { return algorithmName; }
-        }
+        public string AlgorithmName { get; set; }
 
         /// <summary>
         ///     Computes the hash value for the internal data digest.
@@ -1746,7 +1732,7 @@ public class SupportClass
         [CLSCompliant(false)]
         public sbyte[] DigestData()
         {
-            var result = ToSByteArray(Algorithm.ComputeHash(data));
+            var result = ToSByteArray(Algorithm.ComputeHash(Data));
             Reset();
             return result;
         }
@@ -1817,7 +1803,7 @@ public class SupportClass
         /// </summary>
         public void Reset()
         {
-            data = null;
+            Data = null;
             position = 0;
         }
 

@@ -290,5 +290,10 @@ namespace Novell.Directory.Ldap
             }
             return true;
         }
+
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
+        }
     }
 }

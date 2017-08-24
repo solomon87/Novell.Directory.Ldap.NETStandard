@@ -248,14 +248,14 @@ namespace Novell.Directory.Ldap
         /// </exception>
         void Bind(int version, string dn, string passwd, LdapConstraints cons);
 
-        /// <summary>
-        ///     Synchronously authenticates to the Ldap server (that the object is
-        ///     currently connected to) using the specified name, password,
-        ///     and Ldap version.
-        ///     If the object has been disconnected from an Ldap server,
-        ///     this method attempts to reconnect to the server. If the object
-        ///     has already authenticated, the old authentication is discarded.
-        /// </summary>
+        ///  <summary>
+        ///      Synchronously authenticates to the Ldap server (that the object is
+        ///      currently connected to) using the specified name, password,
+        ///      and Ldap version.
+        ///      If the object has been disconnected from an Ldap server,
+        ///      this method attempts to reconnect to the server. If the object
+        ///      has already authenticated, the old authentication is discarded.
+        ///  </summary>
         /// <param name="version">
         ///     The version of the Ldap protocol to use
         ///     in the bind, use Ldap_V3.  Ldap_V2 is not supported.
@@ -273,10 +273,10 @@ namespace Novell.Directory.Ldap
         ///     name and passwd as password.
         /// </param>
         /// <exception>
-        ///     LdapException A general exception which includes an error
-        ///     message and an Ldap error code.
-        /// </exception>
-        void Bind(int version, string dn, sbyte[] passwd);
+        ///      LdapException A general exception which includes an error
+        ///      message and an Ldap error code.
+        ///  </exception>
+        void Bind(int version, string dn, byte[] passwd);
 
         /// <summary>
         ///     Synchronously authenticates to the Ldap server (that the object is
@@ -309,7 +309,7 @@ namespace Novell.Directory.Ldap
         ///     LdapException A general exception which includes an error
         ///     message and an Ldap error code.
         /// </exception>
-        void Bind(int version, string dn, sbyte[] passwd, LdapConstraints cons);
+        void Bind(int version, string dn, byte[] passwd, LdapConstraints cons);
 
         /// <summary>
         ///     Asynchronously authenticates to the Ldap server (that the object is
@@ -344,7 +344,7 @@ namespace Novell.Directory.Ldap
         ///     LdapException A general exception which includes an error
         ///     message and an Ldap error code.
         /// </exception>
-        LdapResponseQueue Bind(int version, string dn, sbyte[] passwd, LdapResponseQueue queue);
+        LdapResponseQueue Bind(int version, string dn, byte[] passwd, LdapResponseQueue queue);
 
         /// <summary>
         ///     Asynchronously authenticates to the Ldap server (that the object is
@@ -382,7 +382,7 @@ namespace Novell.Directory.Ldap
         ///     LdapException A general exception which includes an error
         ///     message and an Ldap error code.
         /// </exception>
-        LdapResponseQueue Bind(int version, string dn, sbyte[] passwd, LdapResponseQueue queue, LdapConstraints cons);
+        LdapResponseQueue Bind(int version, string dn, byte[] passwd, LdapResponseQueue queue, LdapConstraints cons);
 
         /// <summary>
         ///     Connects to the specified host and port.

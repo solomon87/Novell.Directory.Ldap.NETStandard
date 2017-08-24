@@ -207,7 +207,7 @@ namespace Novell.Directory.Ldap.Asn1
         /// </summary>
         public object decodeNumeric(Stream in_Renamed, int len)
         {
-            long l = 0;
+            int l = 0;
             var r = in_Renamed.ReadByte();
 
             if (r < 0)

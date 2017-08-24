@@ -230,7 +230,7 @@ namespace Novell.Directory.Ldap.Asn1
         {
             var c = id.Asn1Class;
             var t = id.Tag;
-            var ccf = (sbyte) ((c << 6) | (id.Constructed ? 0x20 : 0));
+            var ccf = (byte) ((c << 6) | (id.Constructed ? 0x20 : 0));
 
             if (t < 30)
             {

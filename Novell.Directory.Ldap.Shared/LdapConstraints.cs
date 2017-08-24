@@ -175,8 +175,6 @@ namespace Novell.Directory.Ldap
         private LdapReferralHandler refHandler;
         private LdapControl[] controls;
         private static object nameLock; // protect agentNum
-        private static int lConsNum = 0; // Debug, LdapConstraints num
-        private string name; // String name for debug
         private Hashtable properties; // Properties
 
         /// <summary>
