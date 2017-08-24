@@ -2,6 +2,7 @@ sudo: required
 dist: trusty
 language: csharp
 mono: none
+dotnet: 1.1.0
 dotnet: 2.0.0
 
 env:
@@ -20,8 +21,6 @@ env:
 
 before_install:
 - sudo wget "https://download.microsoft.com/download/D/0/2/D028801E-0802-43C8-9F9F-C7DB0A39B344/dotnet-sharedframework-ubuntu-x64.1.1.2.deb"
-- sudo dpkg -i dotnet-sharedframework-ubuntu-x64.1.1.2.deb
-- sudo apt-get install -f
 
 addons:
   apt:
