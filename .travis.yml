@@ -2,27 +2,10 @@ sudo: required
 dist: trusty
 language: csharp
 mono: none
-dotnet: 1.1.0
 dotnet: 2.0.0
 
 env:
-- CONFIGURATION=Release NOTHREADS=10 SECURITY=OFF
-- CONFIGURATION=Release NOTHREADS=10 SECURITY=SSL
-- CONFIGURATION=Release NOTHREADS=10 SECURITY=TLS
-- CONFIGURATION=Release NOTHREADS=20 SECURITY=OFF
-- CONFIGURATION=Release NOTHREADS=20 SECURITY=SSL
-- CONFIGURATION=Release NOTHREADS=20 SECURITY=TLS
-- CONFIGURATION=Release NOTHREADS=50 SECURITY=OFF
-- CONFIGURATION=Release NOTHREADS=50 SECURITY=SSL
-- CONFIGURATION=Release NOTHREADS=50 SECURITY=TLS
-- CONFIGURATION=Debug NOTHREADS=50 SECURITY=OFF
-- CONFIGURATION=Debug NOTHREADS=50 SECURITY=SSL
-- CONFIGURATION=Debug NOTHREADS=50 SECURITY=TLS
-
-before_install:
-- sudo wget "https://download.microsoft.com/download/D/0/2/D028801E-0802-43C8-9F9F-C7DB0A39B344/dotnet-sharedframework-ubuntu-x64.1.1.2.deb"
-- sudo dpkg -i dotnet-sharedframework-ubuntu-x64.1.1.2.deb
-- sudo apt-get install -f
+- CONFIGURATION=Release NOTHREADS= SECURITY=OFF $RUNCMD=test $PROJECT=Novell.Directory.Ldap.UnitTests.NETCore1_1/Novell.Directory.Ldap.UnitTests.NETCore1_1.csproj
 
 addons:
   apt:
@@ -59,6 +42,5 @@ before_script:
 
 script:
   - dotnet restore
-  - dotnet build --configuration $CONFIGURATION **/*.csproj
-  - export TRANSPORT_SECURITY=$SECURITY; dotnet test --configuration $CONFIGURATION Novell.Directory.Ldap.UnitTests.NETCore1_1/Novell.Directory.Ldap.UnitTests.NETCore1_1.csproj
-  - export TRANSPORT_SECURITY=$SECURITY; dotnet run --configuration $CONFIGURATION --project Novell.Directory.Ldap.StressTests/Novell.Directory.Ldap.StressTests.csproj $NOTHREADS 45
+  - dotnet build --configuration $CONFIGURATION $PROJECT
+  - export TRANSPORT_SECURITY=$SECURITY; dotnet $RUNCMD --configuration $CONFIGURATION --project $PROJECT $NOTHREADS
