@@ -15,6 +15,7 @@ before_install:
 - sudo mv microsoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpg
 - sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/microsoft-ubuntu-trusty-prod trusty main" > /etc/apt/sources.list.d/dotnetdev.list'
 - sudo apt-get update
+- sudo apt-get -i dotnet-dev-1.1.0
 - sudo wget "https://download.microsoft.com/download/D/0/2/D028801E-0802-43C8-9F9F-C7DB0A39B344/dotnet-sharedframework-ubuntu-x64.1.1.2.deb"
 - sudo dpkg -i dotnet-sharedframework-ubuntu-x64.1.1.2.deb
 - sudo apt-get install -f
