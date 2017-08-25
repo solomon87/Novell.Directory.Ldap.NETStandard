@@ -43,4 +43,4 @@ before_script:
 script:
   - dotnet restore
   - dotnet build --configuration $CONFIGURATION $PROJECT
-  - export TRANSPORT_SECURITY=$SECURITY; dotnet $RUNCMD --configuration $CONFIGURATION --project $PROJECT $NOTHREADS
+  - export TRANSPORT_SECURITY=$SECURITY; dotnet $RUNCMD $PROJECT $NOTHREADS --configuration $CONFIGURATION
