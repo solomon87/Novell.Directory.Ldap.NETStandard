@@ -23,7 +23,7 @@ before_install:
 addons:
   apt:
     packages:
-	- libcurl3
+    - libcurl3
     - ldap-utils
     - gnutls-bin
     - ssl-cert
