@@ -6,18 +6,6 @@ dotnet: 2.0.0
 
 env:
 - CONFIGURATION=Release NOTHREADS= SECURITY=OFF $RUNCMD=test $PROJECT=Novell.Directory.Ldap.UnitTests.NETCore1_1/Novell.Directory.Ldap.UnitTests.NETCore1_1.csproj
-- CONFIGURATION=Release NOTHREADS= SECURITY=SSL $RUNCMD=test $PROJECT=Novell.Directory.Ldap.UnitTests.NETCore1_1/Novell.Directory.Ldap.UnitTests.NETCore1_1.csproj
-- CONFIGURATION=Release NOTHREADS= SECURITY=TLS $RUNCMD=test $PROJECT=Novell.Directory.Ldap.UnitTests.NETCore1_1/Novell.Directory.Ldap.UnitTests.NETCore1_1.csproj
-- CONFIGURATION=Release NOTHREADS=50 45 SECURITY=OFF $RUNCMD=run --project $PROJECT=Novell.Directory.Ldap.StressTests/Novell.Directory.Ldap.StressTests.csproj
-
-before_install:
-- curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
-- sudo mv microsoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpg
-- sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/microsoft-ubuntu-trusty-prod trusty main" > /etc/apt/sources.list.d/dotnetdev.list'
-- sudo apt-get update
-- sudo wget "https://download.microsoft.com/download/D/0/2/D028801E-0802-43C8-9F9F-C7DB0A39B344/dotnet-sharedframework-ubuntu-x64.1.1.2.deb"
-- sudo dpkg -i dotnet-sharedframework-ubuntu-x64.1.1.2.deb
-- sudo apt-get install -f
 
 addons:
   apt:
